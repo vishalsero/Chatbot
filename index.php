@@ -61,9 +61,9 @@ this.value = '';
 	 //$("#rec").img(recognition ? "<img src='images/mic.png'/>" : "<img src='mic-recording.png'/>");
 	//console.log(recognition,"recognition");
 	if(recognition)
-	 $('#imgMic').attr('src', 'images/mic-recording.png');
+	 $('#imgMic').attr('src', 'mic-recording.png');
 	 else
-	 $('#imgMic').attr('src', 'images/mic.png');
+	 $('#imgMic').attr('src', 'mic.png');
     }
 function send() {
         var text = $("#input").val();
