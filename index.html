@@ -58,7 +58,7 @@ this.value = '';
     }
     function updateRec() {
 	 //$("#rec").text(recognition ? "Stop" : "Speak");
-	 //$("#rec").img(recognition ? "<img src='images/mic.png'/>" : "<img src='images/mic-recording.png'/>");
+	 //$("#rec").img(recognition ? "<img src='images/mic.png'/>" : "<img src='mic-recording.png'/>");
 	//console.log(recognition,"recognition");
 	if(recognition)
 	 $('#imgMic').attr('src', 'images/mic-recording.png');
@@ -207,9 +207,9 @@ function send() {
 <body>
 	<div class="bot chat-box">
 	<div class="header" style="">
-		<span class="logo"><img src="images/logo.png"/></span>
+		<span class="logo"><img src="logo.png"/></span>
 		<span class="title">Welcome to Academia - AI</span>
-		<span class="arrow"><img src="images/arrow.png"/></span>
+		<span class="arrow"><img src="arrow.png"/></span>
 	</div>
 	<div class="b-agent-demo_result" id="resultWrapper">
   <table class='b-agent-demo_result-table'>
@@ -220,7 +220,7 @@ function send() {
   </div>
   <br />
   <div style="border: 1px solid #ccc;">
-    <input id="input" type="text" placeholder="Ask me something..." autocomplete="off" class="ask-me" /><button id="rec" class="speak-btn"><img id='imgMic' src="images/mic.png"/></button>
+    <input id="input" type="text" placeholder="Ask me something..." autocomplete="off" class="ask-me" /><button id="rec" class="speak-btn"><img id='imgMic' src="mic.png"/></button>
  </div>
 	</div>
 </body>
