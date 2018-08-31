@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>API Example</title>
+	<title>AcademiaERP AI</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
