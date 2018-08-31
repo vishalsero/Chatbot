@@ -5,6 +5,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript">
     var accessToken ="92d80b8ee0d242b6aa6ebda5407e83ff";
+	function makeid() {
+               var text = "";
+               var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+               for (var i = 0; i < 5; i++)
+                   text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+               return text;
+           }
+
+           var sessionID = makeid();
     var baseUrl = "https://api.dialogflow.com/v1/";
     $(document).ready(function() {
         $("#input").keypress(function(event) {
@@ -73,13 +84,13 @@ function send() {
 	
         $.ajax({
             type: "POST",
-            url: baseUrl + "query?v=20150910",
+            url: baseUrl + "query?v="+sessionID,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             headers: {
                 "Authorization": "Bearer " + accessToken
             },
-            data: JSON.stringify({ query: text, lang: "en", sessionId: "somerandomthing" }),
+            data: JSON.stringify({ query: text, lang: "en", sessionId: sessionID }),
             success: function(data) {
                 var respText = data.result.fulfillment.speech;
                 //console.log("Respuesta: " + respText);
